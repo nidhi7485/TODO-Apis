@@ -14,7 +14,6 @@ const todoSchema = new mongoose.Schema(
     createdBy: {
       type: mongoose.Types.ObjectId,
       ref: 'Register',
-      required: [true, 'please provide user'],
     },
   },
   { timestamps: true }
