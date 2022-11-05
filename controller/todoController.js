@@ -1,10 +1,10 @@
 const Todo = require('../model/Todo')
 
 const createTodo = async (req, res) => {
-  // console.log(req.body)
   try {
+    // req.body.createdBy = req.user.userID
     const todo = await Todo.create(req.body)
-    console.log(req.body)
+    // console.log(req.body)
     res.json({ todo })
   } catch (error) {
     res.status(500).json({ msg: error })
